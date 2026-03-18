@@ -1,0 +1,4 @@
+# This file will delete if you will use cypress run on local side.
+# Its expected. Just restore a file before commiting, dont delete it in remote repository
+
+*.xml
