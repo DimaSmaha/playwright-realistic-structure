@@ -1,0 +1,114 @@
+{
+  "extends": ["airbnb-base", "prettier", "plugin:@typescript-eslint/recommended"],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "plugins": ["chai-friendly", "prettier", "@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules"]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["playwright/**/*.ts", "playwright.config.ts"],
+      "extends": ["plugin:playwright/recommended"],
+      "env": {
+        "node": true
+      },
+      "parserOptions": {
+        "project": "./tsconfig.playwright.json"
+      },
+      "rules": {
+        // add Playwright-specific linting later
+      }
+    }
+  ],
+  "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "lines-between-class-members": "off",
+    "no-whitespace-before-property": "off",
+    "chai-friendly/no-unused-expressions": "error",
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "no-trailing-spaces": "error",
+
+    "no-plusplus": "off",
+    "no-unreachable-loop": "error",
+    "no-unneeded-ternary": "error",
+    "no-useless-return": "error",
+    "no-nested-ternary": "error",
+    "no-import-assign": "error",
+    "no-return-assign": "error",
+    "no-dupe-else-if": "error",
+    "no-const-assign": "error",
+    "no-unreachable": "error",
+    "arrow-spacing": "error",
+    "comma-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "no-dupe-args": "error",
+    "no-labels": "error",
+    "eqeqeq": "error",
+    "quotes": [
+      "error",
+      "double",
+      {
+        "allowTemplateLiterals": true,
+        "avoidEscape": true
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "class-methods-use-this": "off",
+    "no-extra-boolean-cast": "warn",
+    "prefer-arrow-callback": "warn",
+    "no-useless-escape": "warn",
+    "no-extra-parens": "warn",
+    "space-infix-ops": "warn",
+    "prefer-const": "warn",
+    "brace-style": ["warn", "1tbs", { "allowSingleLine": true }],
+    "camelcase": "warn",
+    "id-length": [
+      "warn",
+      {
+        "min": 1,
+        "max": 50
+      }
+    ],
+    "indent": ["off", 2],
+    "max-len": [
+      "warn",
+      {
+        "ignoreTrailingComments": true,
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "tabWidth": 2,
+        "code": 200
+      }
+    ],
+    "no-unused-expressions": "off"
+  }
+}

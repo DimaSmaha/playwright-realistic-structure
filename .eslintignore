@@ -1,0 +1,4 @@
+**/*.feature
+**/*.md
+**/*.json
+**/seed.spec.ts

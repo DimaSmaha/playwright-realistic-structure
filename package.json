@@ -1,0 +1,42 @@
+{
+  "scripts": {
+    "lint-all-files": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
+    "pw-open-trace": "playwright show-trace",
+    "pw-open-report": "playwright show-report",
+    "pw-install-chromium": "playwright install --with-deps chromium",
+    "pw-run-regression-suite-ci": "playwright test --project regression-suite"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,ts,json}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.0.0",
+    "@playwright/test": "^1.58.0",
+    "@types/chai-json-schema": "^1.4.10",
+    "@types/node": "^25.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "chai-json-schema": "^1.5.1",
+    "dotenv": "^17.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^10.1.0",
+    "eslint-plugin-chai-friendly": "^1.1.0",
+    "eslint-plugin-playwright": "^2.7.0",
+    "eslint-plugin-prettier": "^5.5.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^16.2.0",
+    "pdf-parse": "^2.4.0",
+    "playwright-ajv-schema-validator": "^1.0.2",
+    "prettier": "^3.8.0",
+    "typescript": "^5.9.0"
+  }
+}

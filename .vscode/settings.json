@@ -1,0 +1,8 @@
+{
+  "chat.mcp.serverSampling": {
+    "playwright/.vscode/mcp.json: ?some-mcp-server": {
+      "allowedModels": ["copilot/gpt-4.1", "copilot/gpt-4o", "copilot/gpt-5-mini"],
+      "cloudId": ""
+    }
+  }
+}
